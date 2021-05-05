@@ -1,0 +1,79 @@
+ {% extends 'Base.html' %}
+ {% load static %}
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GRUP EXCURSIONISTA ASSAMBLEARI</title>
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static '/css/bootstrap.min.css' %}" link rel="stylesheet">
+<script src="{% static '/jquery/jquery.min.js' %} "></script>
+<script src = "{% static '/js/bootstrap.min.js' %}"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+        
+
+       {% block contenido %}
+
+       
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="{% static '/images/EscutMolins.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+
+          <h2 class="my-4">I ara què fem?
+          <!--<small>Secondary Text</small>-->
+          </h2>
+            
+            <p class="card-text">Benvolguts i benvolgudes,
+
+Escrivim aquestes línies per donar a conèixer el projecte que fa uns mesos estem gestant unes quantes esportistes de Molins i altres viles veïnes. 
+
+Aquest projecte és el Grup Excursionista Assembleari de Molins, o també anomenat GEA, tot evocant la divinitat grega que representa la terra com a element primordial.
+
+La idea de crear un nou centre excursionista a la vila sorgeix d’uns quants amics i amigues, companys i conegudes que, compartint l’estima per la natura i l’afició a l’esport i la muntanya, decidim que ens ve de gust unir esforços per tal de fer d’aquest passatemps una cosa més formal i que pugui englobar més persones, tant de Molins com de pobles propers.
+
+El motiu principal és que formalitzant-ho i constituint-nos com a entitat, enriquim el teixit associatiu, apropem l’esport i la muntanya a altres persones, podem fer activitats obertes a tothom i, en definitiva, construïm vila.
+
+Com el seu nom indica, el nostre tret característic, i allò que volem que ens diferenciï d’altres grups excursionistes, és el terme assembleari. Doncs totes les decisions, objectius, sortides i activitats es decideixen i es treballen de forma assembleària, horitzontal, donant veu a totes aquelles que hi participem, sense importar el temps que hi dediques, els anys que fa que practiques esport o els coneixements en la matèria. Tots i totes som escoltades i tenim veu i vot, facilitant dinàmiques de diàleg i participació que ho facin possible.
+
+Moltes de nosaltres hem col·laborat o formem part d’altres entitats i moviments socials de la vila i creiem fermament que és important dur a terme projectes amb aquesta metodologia i valors. Volem que sigui una entitat inclusiva, plural, oberta i respectuosa, on tots i totes ens hi sentim a gust.
+
+Així doncs, si et crida l’atenció el projecte i t’interessa formar-hi part o vols més informació, no dubtis en contactar amb nosaltres!!
+            
+            </p>
+
+
+            <img class="card-img-top" src="{% static '/images/IlustracionOvercoming.webp' %}" alt="Card image cap">
+
+            <h2 class="my-4">Comencem doncs!
+            <small>Agafeu-me el cubata!</small>
+            </h2>
+
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+
+          </div>
+        </div>
+
+  
+
+
+
+       {% endblock contenido %}
+
+
+</body>
+
+</html>

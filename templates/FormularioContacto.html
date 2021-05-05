@@ -1,0 +1,319 @@
+ {% load static %}
+ 
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GRUP EXCURSIONISTA GEA </title>
+  
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static '/css/bootstrap.min.css' %}" link rel="stylesheet">
+<script src="{% static '/jquery/jquery.min.js' %} "></script>
+<script src = "{% static '/js/bootstrap.min.js' %}"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/blog-home.css' %}" rel="stylesheet">
+  <!--SOCIAL ICONS--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--SOCIAL ICONS-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+      <!-- Logo Image -->
+      <img src="{% static '/images/Logo.png' %}" width="45" alt="" class="d-inline-block align-middle mr-2">
+      <!-- Logo Text -->
+      <span class="text-uppercase font-weight-bold">GRUP EXC. ASSAMBLEARI</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'Index'%}">HOME
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              GEA
+            </a>
+            <div class="dropdown-menu" >
+              <a class="dropdown-item" href="{% url 'QueQuiCom'%}">QUE,QUI,COM</a>
+              <a class="dropdown-item" href="{% url 'Estatuts'%}">ESTATUTS</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Seccions'%}">SECCIONS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'FormularioContacto'%}">CONTACTE</a>
+          </li>
+        </ul>
+          <div class="sign">
+            {% if user.is_authenticated %}
+            <a class="text-uppercase" href="{% url 'usuario' user.usuario.Nombre_id %}" style=" margin-left:10px;width: 16px;">{{user.username}}</a>
+            <a href="{% url 'signout'%}" style=" margin-left:10px;width: 16px;"><i class="fa fa-sign-out fa-lg" style="color:#0275d8;"></i> </a>
+            {%else%}
+            <a href="{% url 'sign'%}" style=" margin-left:10px;width: 16px;"><i class="fa fa-sign-in fa-lg" style="color:white;"></i> </a>
+            {% endif %}
+          </div> 
+
+
+      </div>
+    </div>
+  </nav>
+    
+   <!--Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-12" style="padding:50px">
+
+
+          <div class="container">
+            <div><h1>Contacte</h1></div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="googlemap" style="width:100%; height:100%;"></div>
+                </div>
+                <br />
+                
+                <div class="col-md-6">
+                    <form class="my-form"action="/contactoExitoso/" method="POST">{% csrf_token %}
+                        <div class="form-group">
+                            <label for="form-name">Nom</label>
+                            <input type="text" class="form-control"  placeholder="" name="txtNom">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Adreça Correu Electronic</label>
+                            <input type="email" class="form-control"  placeholder=""name="txtEmail">
+                        </div>
+                      <!-- Otros Campos 
+                        <div class="form-group">
+                            <label for="form-subject">Telefon</label>
+                            <input type="text" class="form-control" id="form-subject" placeholder="">
+                        </div>-->
+                        <div class="form-group">
+                            <label for="form-message">Missatge</label>
+                            <textarea class="form-control"rows="5" cols="30" style="height:280px; resize:none" placeholder=""name="txtMissatge"></textarea>  
+                        </div>
+                        <button class="btn btn-default" type="submit">Enviar</button>                
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+        <style>
+            .my-form {
+                color: #305896;
+            }
+            .my-form .btn-default {
+                background-color: #305896;
+                color: #fff;
+                border-radius: 0;
+            }
+            .my-form .btn-default:hover {
+                background-color: #4498C6;
+                color: #fff;
+            }
+            .my-form .form-control {
+                border-radius: 0;
+            }
+        </style>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                // Google Maps setup
+                var googlemap = new google.maps.Map(
+                    document.getElementById('googlemap'),
+                    {
+                        center: new google.maps.LatLng(41.4134488, 2.0182425),
+                        zoom: 15,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                );
+            });
+        </script>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <!-- Search Widget -->
+      <!-- Categories Widget -->
+      <!-- Side Widget -->
+        
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+ <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <button type="button" class="btn btn-fb m-2" style="width:3em;"><i class="fa fa-facebook"></i></button>
+
+      <!-- Twitter -->
+      <button type="button" class="btn btn-tw m-2" style="width:3em;"><i class="fa fa-twitter"></i></button>
+
+      <!-- Google -->
+      <button type="button" class="btn btn-tw m-2" style="width:3em;"><i class="fa fa-twitter"></i></button>
+
+      <!-- Instagram -->
+      <button type="button" class="btn btn-ins m-2" style="width:3em;"><i class="fa fa-instagram"></i></button>
+
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            
+           
+
+
+
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Associacions Amigues</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sobre Nosaltres</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Legal</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">CONTACTE</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <img src="{% static '/images/CreativeCommons.png' %}" width="150em" alt="">
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

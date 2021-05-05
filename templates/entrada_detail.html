@@ -1,0 +1,55 @@
+ {% extends 'Base.html' %}
+ 
+ {% load static %}
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GRUP EXCURSIONISTA ASSAMBLEARI</title>
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static '/css/bootstrap.min.css' %}" link rel="stylesheet">
+<script src="{% static '/jquery/jquery.min.js' %} "></script>
+<script src = "{% static '/js/bootstrap.min.js' %}"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+       {% block contenido %}
+
+       <h1 class="my-4">
+          <!--<small>Secondary Text</small>-->
+        </h1>
+
+        <!-- Blog Post --> 
+        
+          <div class="card mb-4">
+            <img class="card-img-top" src="{{object.imagen.url}}" alt="">
+            
+            <div class="card-body" >
+              <h2 class="card-title">{{ object.titulo }}  </h2>               
+              <p class="card-text">{{object.contenido }}</p> 
+            </div>
+            <div class="card-footer text-muted">
+              <p>Subido {{object.fecha_contenido}}</p>
+            </div>
+          </div>
+
+       {% endblock contenido %}
+
+
+</body>
+
+</html>
+

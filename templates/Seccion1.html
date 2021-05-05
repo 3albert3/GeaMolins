@@ -1,0 +1,363 @@
+ {% extends 'BaseSeccion.html' %}
+ {% load static %}
+
+ 
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GRUP EXCURSIONISTA GEA </title>
+  
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static '/css/bootstrap.min.css' %}" link rel="stylesheet">
+<script src="{% static '/jquery/jquery.min.js' %} "></script>
+<script src = "{% static '/js/bootstrap.min.js' %}"></script>
+
+
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/blog-home.css' %}" rel="stylesheet">
+  <!--SOCIAL ICONS--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--SOCIAL ICONS-->
+
+</head>
+
+<body>
+      <style>
+
+      </style>
+      {% block Section1 %}        
+          <div id="section1" class="container-fluid p-3 bg-dark text-white" style="width: 100%;">
+              <div class="text-center pt-0" style="height: 100%; width: 100%; background-size:cover;">
+                <img src="{% static '/images/snow-mountainsL.jpg' %}" style="width: 100%;" class="img-fluid" alt=""> 
+                <h1 style="margin-top:20px"> <p class="font-weight-light">SECCIÓ ESCALADA</p>  </h1>
+              </div>
+          </div>
+      {% endblock Section1 %}
+
+      {% block Section2 %} 
+          <div id="section2" class="text-center container-fluid p-5 text-dark"  style="width: 100%;">
+
+                
+
+               <div class="row">
+                    <h1 class="display-5">ESCOLES CACHONDES</h1>                    
+               </div>
+
+               <div class="row" >
+                 <div class="scroll col" >
+                 <style type="text/css">
+                          
+
+                          .scroll {
+
+                              width: 120%;
+
+                              height:auto;
+
+                              overflow:hidden;
+
+                              text-align:justify;
+
+                          }
+
+                          .scrollContent{
+
+                              width: 112%;
+
+                              height:300px;
+
+                              overflow-y:auto;
+
+                              overflow-x:hidden;
+
+                              box-sizing:border-box;
+
+                          }
+                </style>
+                    <div class="scrollContent">
+                      
+
+
+
+                      <div class="card mb-3" style="max-width: 95%">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img
+                              src="{% static '/images/IlustracionFarigoleroRESEÑA.jpg' %}"
+                              alt="..."
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                              </p>
+                              <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card mb-3" style="max-width: 95%">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img
+                              src="{% static '/images/IlustracionFarigoleroRESEÑA.jpg' %}"
+                              alt="..."
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                              </p>
+                              <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card mb-3" style="max-width: 95%">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img
+                              src="{% static '/images/IlustracionFarigoleroRESEÑA.jpg' %}"
+                              alt="..."
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                              </p>
+                              <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+
+
+
+
+
+                    </div>
+                  </div>     
+                  
+
+                    <style>
+                      .map-container-3{
+                        overflow:hidden;
+                        padding-bottom:43%;
+                        position:relative;
+                        height:0;
+                      }
+                      .map-container-3 iframe{
+                        left:0;
+                        top:0;
+                        height:100%;
+                        width:100%;
+                        position:absolute;
+                      }
+                    </style>
+
+                  <div class="col d-none d-xs-none d-md-block">
+                      <div id="map-container-google-3" class="z-depth-1-half map-container-3">
+                       <iframe src="https://www.google.com/maps/d/embed?mid=1F-nGZR-IiUvr1bHQjAX-sWbd6ZWcpmZJ" width="640" height="480"></iframe>
+                      </div>
+                  </div>
+
+               </div>
+                      
+          </div>
+      {% endblock Section2 %}
+
+      {% block Section3 %} 
+          <div id="section3" class="container-fluid px-0">
+             <style>
+                .parallax {
+                  /* The image used */
+                  background-image: url("/static/images/rock-climbing.jpg");
+
+                  /* Set a specific height */
+                  min-height: 700px;
+
+                  /* Create the parallax scrolling effect */
+                  background-attachment: fixed;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
+              </style>
+
+              <!-- Container element -->
+              <div class="parallax"></div> 
+          </div>
+      {% endblock Section3 %}
+
+      {% block Section41 %} 
+          <div id="section41" class="text-center container-fluid p-5 text-dark"  style="width: 100%;">
+               <div class="row">
+                    <h1 class="display-5">ÚLTIMES ACTIVITATS</h1>                    
+               </div>
+                {%if form.errors%}
+
+                  <div class="alert alert-warning">
+                    <strong>Warning!</strong> Indicates a warning that might need attention.
+                  </div>
+
+                {%endif%}
+
+
+                
+                  <div class="card">
+                    <div class="card-body">
+                      
+                    
+                    
+
+                      {% for Actividad in object_list %}
+                          <h1 my-0>{{ Actividad.Nombre_Actividad }}</h1>
+                          <h5 my-2>Data: {{ Actividad.Fecha_Actividad }} / Secció: {{ Actividad.seccion }}</h5>
+                          
+                        <!--<form action"" method"POST">-->
+                         <p class="small my-2"> Codi: {{ Actividad.Codigo }} </p>
+
+                            <div class="container mx-auto">
+                            
+                              <div class="row justify-content-md-center">
+                                
+                                 <div class="col-lg-5">
+                                  {% if user.is_authenticated %} 
+                                  
+                                    <form action="{% url 'usuario' user.usuario.Nombre_id %}"  method="POST" id="systemForm">
+                                    {% csrf_token %}
+                                  
+                                    <button type="submit" name="system" form="systemForm" value={{Actividad.Nombre_Actividad}} class="col col-xl-3 col-xl-5 col-xl-12 btn btn-primary" style="margin-top:10px;">Inscriures</button>
+                                    
+                                    </form>
+
+
+                                  {% endif %}
+                                 </div>
+                              </div>
+                             </div>
+
+                         
+                          <p class="small my-2"> {{ Actividad.Descripcion_Actividad }} </p>
+                         
+                      
+                   
+                          <div class="row-fluid col-md-0 text-center" style="background-color:#f4f4f4;min-height:10px; ">
+                          
+                                      <!-- Espaciador -->
+                          </div> 
+                        <!--</form>-->
+                      {% endfor %}    
+                    </div>
+                    
+                  </div>
+
+                
+          </div>
+          <div class="row-fluid col-md-2 text-center" style="background-color:#ffffff;min-height:80px; ">
+              
+          </div>
+      {% endblock Section41 %}
+
+      {% block Section42 %} 
+      <style>
+
+      #pasafotos img
+        {
+          max-width:100%; 
+          max-height:100%;
+          margin:auto;
+          display:inline;
+        }
+      </style>
+
+
+      
+        
+
+        <script>
+        $('#carouselExampleControls').on('slide.bs.carousel', function () {
+            
+            var $ = $(relatedTarget);
+            var idx = $Escalada_list();
+            var itemsPerSlide = 3;
+            var totalItems = $('.carousel-item').length;
+        
+            if (idx >= totalItems-(itemsPerSlide-1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i=0; i<it; i++) {
+                    // append slides to end
+                    if (e.direction=="left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    }
+                    else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+          });
+        </script>
+
+          <div id="section42" class="text-center container-fluid p-5 text-dark"  style="width: 100%;">
+            <div class="row  mx-auto my-5 text-center" style="width:60%; ">
+                
+
+                      <div id="carouselExampleControls" class="carousel slide  mx-auto" data-ride="carousel"  style="width:80%;heigth:100%; background-color:#f4f4f4;">
+                        <div class="carousel-inner" style="height:300px; ">
+                          <div id="pasafotos" class="carousel-item active text-center" style="height:300px;" >
+                            <img class="img-fluid" src="{% static '/images/IlustracionOvercoming.webp' %}" alt="First slide" style="height:300px;" >
+                          </div>
+                          <div id= "pasafotos" class="carousel-item text-center" style="height:300px;" >
+                            <img class="img-fluid " src="{% static '/images/rock-climbing.jpg' %}" alt="Second slide" style="height:300px;" >
+                          </div>
+                          <div id="pasafotos" class="carousel-item text-center" style="height:300px;">
+                            <img class="img-fluid " src="{% static '/images/IlustracionFarigoleroRESEÑA.jpg' %}" alt="Third slide" style="height:300px;">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only"></span>
+                        </a>
+                        <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only"></span>
+                        </a>
+                      </div>
+
+                
+            </div>
+          </div>
+      {% endblock Section42 %}
+
+</body>
+
+</html>

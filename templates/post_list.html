@@ -1,0 +1,12 @@
+{% for post in object_list %}
+<div>
+  <h2>{{ post.titulo }}</h2>
+  <p>{{ post.contenido }}</p>
+   
+  <p>{{ post.imagen}}</p>
+  <p>{{post.fecha_contenido}}
+  <p>{{post.slug}}</p>
+
+</div>
+<hr>
+{% endfor %}

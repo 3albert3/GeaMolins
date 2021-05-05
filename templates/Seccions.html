@@ -1,0 +1,190 @@
+ {% extends 'Base.html' %}
+ {% load static %}
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GRUP EXCURSIONISTA ASSAMBLEARI</title>
+
+  <!-- Bootstrap core CSS -->
+<link href="{% static '/css/bootstrap.min.css' %}" link rel="stylesheet">
+<script src="{% static '/jquery/jquery.min.js' %} "></script>
+<script src = "{% static '/js/bootstrap.min.js' %}"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+        
+
+       {% block contenido %}
+            <style>
+.container1 {
+  position: relative;
+  width: 100%;
+}
+.container2 {
+  position: relative;
+  width: 100%;
+}
+
+.container3 {
+  position: relative;
+  width: 100%;
+}
+
+.container4 {
+  position: relative;
+  width: 100%;
+}
+
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #bee6fd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #bee6fd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+
+.overlay3 {
+  position: absolute;
+  bottom:0 ;
+  left: 0;
+  right: 0;
+  background-color: #bee6fd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #bee6fd;
+  overflow: hidden; 
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay1 {
+  height: 100%;
+  
+}
+
+.container2:hover .overlay2 {
+  height: 100%;
+}
+
+.container3:hover .overlay3 {
+  height: 100%;
+}
+
+.container4:hover .overlay4 {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+
+          
+          <div class="row" style="padding-top:50px; padding-bottom:50px" >
+            <div class="col-lg-6" >
+                <div class="container1">
+                      <img class="img-fluid" src="{% static '/images/IlustracionMontaña1.webp' %}" style="padding:10px; margin:auto; display:block;" />
+                      <div class="overlay1">
+                        <div class="text"><a href="{% url 'Seccion1' %}"style="text-decoration:none;color:white; font-size:70px;">ESCALADA</a></div>
+                      </div>
+                </div>
+                <div class="container2">
+                      <img class="img-fluid" src="{% static '/images/IlustracionMontaña1.webp' %}" style="padding:10px; margin:auto; display:block;"/>
+                      <div class="overlay2">
+                        <div class="text"><a href="{% url 'Seccion3' %}"style="text-decoration:none;color:white; font-size:70px;">SKI</a></div>
+                      </div>
+                </div>
+            </div>
+
+            
+
+            <div class="col-lg-6"  >
+                <div class="container3">
+                      <img class="img-fluid" src="{% static '/images/IlustracionMontaña1.webp' %}" style="padding:10px; margin:auto; display:block;"/>
+                      <div class="overlay3">
+                        <div class="text"><a href="{% url 'Seccion2' %}" style="text-decoration:none;color:white; font-size:70px;">BICI</a></div>
+                      </div>
+                </div>
+                <div class="container4">
+                      <img class="img-fluid" src="{% static '/images/IlustracionMontaña1.webp' %}" style="padding:10px; margin:auto; display:block;"/>
+                      <div class="overlay4">
+                        <div class="text"> <a href="{% url 'Seccion4' %}"style="text-decoration:none;color:white; font-size:250%;" >FARIGOLEROS</a></div>
+                      </div>
+                </div>
+            </div>
+          </div>
+
+        
+
+        
+
+
+
+       {% endblock contenido %}
+
+       
+
+        
+
+        
+
+     
+</body>
+
+</html>
+
